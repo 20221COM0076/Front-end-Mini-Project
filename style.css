@@ -1,0 +1,236 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Montserrat:wght@400;600;800&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f4f4f4, #c9e3ac);  
+    color: #333;
+}
+
+/* Navbar - Ensure it's clickable and on top */
+.navbar {
+    background: #2c3e50;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;        /* Fixed navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;          /* Ensure it's above all content */
+}
+
+/* Navbar Links */
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #f39c12 !important;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+/* Hover Effect for Navbar */
+.nav-link:hover {
+    color: #f1c40f !important;
+    transform: scale(1.1);
+}
+
+/* Hero Section with Proper Z-Index */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #4ca1af, #c4e0e5),  
+                url('images/banner.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px #000;
+    animation: fadeIn 2s ease-in;
+    position: relative;    /* Ensure stacking below navbar */
+    z-index: 1;            /* Keep it below the navbar */
+}
+
+/* Overlay Effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.7);  
+    z-index: 0;             /* Ensure it doesn't cover navbar */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Text Styling */
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f1c40f;
+    text-shadow: 3px 3px 10px #000;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #f4f4f4;
+}
+
+/* Button Styling */
+.btn-warning {
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 12px 30px;
+}
+
+.btn-warning:hover {
+    background: #e67e22;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.5);
+}
+
+/* Section Styling with Spacing */
+section {
+    padding: 80px 0;
+    background: #f5f5f5;  
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+/* Cards with Background Colors */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+    background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Images */
+#gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.5s;
+    filter: grayscale(20%);
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+form:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: #f1f1f1; 
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #27ae60;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.5);
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    z-index: 1;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f39c12;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+footer a {
+    color: #f39c12;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
